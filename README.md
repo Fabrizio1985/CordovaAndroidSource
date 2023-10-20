@@ -11,8 +11,8 @@ You can obtain the cordova android shim from maven central and to include your p
 
 		<dependency>
 			<groupId>org.exparity</groupId>
-			<artifactId>cordova-android-shim</artifactId>
-			<version>1.0.0</version>
+			<artifactId>cordova-android-source</artifactId>
+			<version>[1.0.0,)</version>
 			<scope>provided</scope>
 		</dependency>
 
