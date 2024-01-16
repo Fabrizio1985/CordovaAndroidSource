@@ -5,36 +5,35 @@
 
 	<groupId>it.fabrizio</groupId>
 	<artifactId>cordova-android-source</artifactId>
-	<version>1.0.0</version>
+	<version>33.0.0</version>
 
 	<repositories>
+		<!--<repository>
+			<id>local-project-maven-repo</id>
+			<url>file:///${project.basedir}/repo</url>
+		</repository>-->
+		
 		<repository>
-			<id>my-repo</id>
-			<url>http://fabriziotiracorrendo.netsons.org/maven/</url>
+			<id>google</id>
+			<url>https://maven.google.com/</url>
 		</repository>
 	</repositories>
-	
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<!-- Versioni dipendenze -->
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>com.google.android</groupId>
 			<artifactId>android</artifactId>
-			<version>26.0.0</version>
-			<scope>compile</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>com.android.support</groupId>
-			<artifactId>support-v4</artifactId>
-			<version>21.0.0</version>
-			<scope>compile</scope>
+			<version>33.0.0</version>
+			<scope>system</scope>
+			<systemPath>E:\Programmazione\android-sdk\platforms\android-33\android.jar</systemPath>
 		</dependency>
 
 		<dependency>
@@ -42,5 +41,40 @@
 			<artifactId>json</artifactId>
 			<version>20180813</version>
 		</dependency>
+
+		<dependency>
+			<groupId>androidx.appcompat</groupId>
+			<artifactId>appcompat</artifactId>
+			<version>1.6.1</version>
+			<scope>compile</scope>
+			<type>aar</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>androidx.webkit</groupId>
+			<artifactId>webkit</artifactId>
+			<version>1.6.0</version>
+			<scope>compile</scope>
+			<type>aar</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>androidx.core</groupId>
+			<artifactId>core-splashscreen</artifactId>
+			<version>1.0.0</version>
+			<scope>compile</scope>
+			<type>aar</type>
+		</dependency>
 	</dependencies>
+	
+	<!-- BLOCCO QUESTA LIBRERIA A QUESTA VERSIONE -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>androidx.lifecycle</groupId>
+				<artifactId>lifecycle-common</artifactId>
+				<version>2.4.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="CordovaAndroidSource" basedir=".">
+	<property environment="env" />
+	
+	<property name="JAVA" value="E:\Programmazione\java-17.0.2_ant" />
+	<property name="MAVEN" value="E:\Programmazione\maven-3.9.6\bin" />
+	<property name="NODE" value="E:\Programmazione\node-v18.16.0" />
+
+	<target name="create-electron" description="Lsit">
+
+		<exec executable="cmd" dir="${basedir}">
+			<env key="JAVA_HOME" path="${JAVA}" />
+			<env key="PROJECT_PATH" path="${basedir}" />
+			<env key="PATH" path="${NODE}:${MAVEN}:${env.Path}"/>
+			
+			<arg line="/c node unaar.js" />
+		</exec>
+		
+	</target>
+</project>

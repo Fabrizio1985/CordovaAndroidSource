@@ -23,6 +23,7 @@ import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.ConfigXmlParser;
 import org.apache.cordova.LOG;
 import org.apache.cordova.AllowList;
+import org.apache.cordova.CordovaPreferences;
 import org.xmlpull.v1.XmlPullParser;
 
 import android.content.Context;
@@ -73,6 +74,8 @@ public class AllowListPlugin extends CordovaPlugin {
     }
 
     private class CustomConfigXmlParser extends ConfigXmlParser {
+        private CordovaPreferences prefs = new CordovaPreferences();
+
         @Override
         public void handleStartTag(XmlPullParser xml) {
             String strNode = xml.getName();
@@ -119,7 +122,7 @@ public class AllowListPlugin extends CordovaPlugin {
 
     @Override
     public Boolean shouldAllowRequest(String url) {
-        return (this.shouldAllowNavigation(url) || this.allowedRequests.isUrlAllowListed(url))
+        return (Boolean.TRUE.equals(this.shouldAllowNavigation(url)) || this.allowedRequests.isUrlAllowListed(url))
             ? true
             : null; // default policy
     }
