@@ -5,7 +5,7 @@
 	
 	<property name="JAVA" value="E:\Programmazione\java-17.0.2_ant" />
 	<property name="MAVEN" value="E:\Programmazione\maven-3.9.6\bin" />
-	<property name="NODE" value="E:\Programmazione\node-v18.16.0" />
+	<property name="NODE" value="E:\Programmazione\node_mio" />
 
 	<target name="create-electron" description="Lsit">
 
