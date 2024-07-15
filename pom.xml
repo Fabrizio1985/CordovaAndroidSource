@@ -5,7 +5,7 @@
 
 	<groupId>it.fabrizio</groupId>
 	<artifactId>cordova-android-source</artifactId>
-	<version>33.0.0</version>
+	<version>13.0.0</version>
 
 	<repositories>
 		<!--<repository>
@@ -41,7 +41,29 @@
 			<artifactId>json</artifactId>
 			<version>20180813</version>
 		</dependency>
-
+		
+		<dependency>
+			<groupId>org.apache.cordova</groupId>
+			<artifactId>framework</artifactId>
+			<version>13.0.0</version>
+			<scope>compile</scope>
+			<type>aar</type>
+			<exclusions>
+				<exclusion>
+					<groupId>androidx.appcompat</groupId>
+					<artifactId>appcompat</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>androidx.webkit</groupId>
+					<artifactId>webkit</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>androidx.core</groupId>
+					<artifactId>core-splashscreen</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
 		<dependency>
 			<groupId>androidx.appcompat</groupId>
 			<artifactId>appcompat</artifactId>
@@ -62,6 +84,14 @@
 			<groupId>androidx.core</groupId>
 			<artifactId>core-splashscreen</artifactId>
 			<version>1.0.0</version>
+			<scope>compile</scope>
+			<type>aar</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>androidx.biometric</groupId>
+			<artifactId>biometric</artifactId>
+			<version>1.1.0</version>
 			<scope>compile</scope>
 			<type>aar</type>
 		</dependency>

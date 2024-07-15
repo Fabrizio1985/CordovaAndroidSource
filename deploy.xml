@@ -7,7 +7,7 @@
 	<property name="MAVEN" value="E:\Programmazione\maven-3.9.6\bin" />
 	<property name="NODE" value="E:\Programmazione\node_mio" />
 
-	<target name="create-electron" description="Lsit">
+	<target name="convert aar to jar" description="Lsit">
 
 		<exec executable="cmd" dir="${basedir}">
 			<env key="JAVA_HOME" path="${JAVA}" />
