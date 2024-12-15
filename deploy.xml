@@ -12,7 +12,7 @@
 		<exec executable="cmd" dir="${basedir}">
 			<env key="JAVA_HOME" path="${JAVA}" />
 			<env key="PROJECT_PATH" path="${basedir}" />
-			<env key="PATH" path="${NODE}:${MAVEN}:${env.Path}"/>
+			<env key="PATH" path="${JAVA_HOME}\bin;${NODE}:${MAVEN}:${env.Path}"/>
 			
 			<arg line="/c node unaar.js" />
 		</exec>

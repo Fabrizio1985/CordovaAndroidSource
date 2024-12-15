@@ -17,6 +17,8 @@ const exec = function execShellCommand(cmd) {
 
 async function fn() {
 	const stdout = await exec('mvn dependency:list --settings E:\\maven\\settings-mio.xml');
+	
+	console.log(stdout);
 
 	const regex = /([\w.]+):([\w-]+):(\w+).*:([\w.]+):([\w.]+)/;
 
