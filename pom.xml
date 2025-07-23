@@ -5,14 +5,9 @@
 
 	<groupId>it.fabrizio</groupId>
 	<artifactId>cordova-android-source</artifactId>
-	<version>13.0.0</version>
+	<version>14.0.0</version>
 
 	<repositories>
-		<!--<repository>
-			<id>local-project-maven-repo</id>
-			<url>file:///${project.basedir}/repo</url>
-		</repository>-->
-
 		<repository>
 			<id>google</id>
 			<url>https://maven.google.com/</url>
@@ -25,6 +20,8 @@
 		<!-- Versioni dipendenze -->
 		<maven.compiler.source>1.17</maven.compiler.source>
 		<maven.compiler.target>1.17</maven.compiler.target>
+		
+		<path.android.source>E:\Programmazione\android-sdk\platforms\android-33\android.jar</path.android.source>
 	</properties>
 
 	<dependencies>
@@ -33,8 +30,7 @@
 			<artifactId>android</artifactId>
 			<version>33.0.0</version>
 			<scope>system</scope>
-			<systemPath>
-		E:\Programmazione\android-sdk\platforms\android-33\android.jar</systemPath>
+			<systemPath>${path.android.source}</systemPath>
 		</dependency>
 
 		<dependency>
@@ -46,7 +42,7 @@
 		<dependency>
 			<groupId>org.apache.cordova</groupId>
 			<artifactId>framework</artifactId>
-			<version>13.0.0</version>
+			<version>14.0.1</version>
 			<scope>compile</scope>
 			<type>aar</type>
 			<exclusions>
@@ -62,13 +58,17 @@
 					<groupId>androidx.core</groupId>
 					<artifactId>core-splashscreen</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>androidx.lifecycle</groupId>
+					<artifactId>lifecycle-common</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		
 		<dependency>
 			<groupId>androidx.appcompat</groupId>
 			<artifactId>appcompat</artifactId>
-			<version>1.6.1</version>
+			<version>1.7.0</version>
 			<scope>compile</scope>
 			<type>aar</type>
 		</dependency>
@@ -76,7 +76,7 @@
 		<dependency>
 			<groupId>androidx.webkit</groupId>
 			<artifactId>webkit</artifactId>
-			<version>1.6.0</version>
+			<version>1.12.1</version>
 			<scope>compile</scope>
 			<type>aar</type>
 		</dependency>
@@ -84,7 +84,7 @@
 		<dependency>
 			<groupId>androidx.core</groupId>
 			<artifactId>core-splashscreen</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.1</version>
 			<scope>compile</scope>
 			<type>aar</type>
 		</dependency>
@@ -128,14 +128,16 @@
 		</dependency>
 	</dependencies>
 
+	
 	<!-- BLOCCO QUESTA LIBRERIA A QUESTA VERSIONE -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>androidx.lifecycle</groupId>
 				<artifactId>lifecycle-common</artifactId>
-				<version>2.4.0</version>
+				<version>2.6.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
 </project>

@@ -3,7 +3,7 @@
 <project name="CordovaAndroidSource" basedir=".">
 	<property environment="env" />
 	
-	<property name="JAVA" value="E:\Programmazione\java-17.0.2_ant" />
+	<property name="JAVA" value="E:\Programmazione\java-android" />
 	<property name="MAVEN" value="E:\Programmazione\maven-3.9.6\bin" />
 	<property name="NODE" value="E:\Programmazione\node_mio" />
 
